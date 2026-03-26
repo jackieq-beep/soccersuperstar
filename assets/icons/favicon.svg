@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Soccer Superstar icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1f3a"/>
+      <stop offset="100%" stop-color="#050b14"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+  <!-- crown body -->
+  <path d="M5 24 L5 14 L10 19 L16 7 L22 19 L27 14 L27 24 Z" fill="#d6ff33"/>
+  <!-- crown base band -->
+  <rect x="5" y="22" width="22" height="3.5" rx="1" fill="#b8d900"/>
+  <!-- crown tip dots -->
+  <circle cx="16" cy="7"  r="2.2" fill="#ffffff"/>
+  <circle cx="5"  cy="14" r="1.8" fill="#ffffff"/>
+  <circle cx="27" cy="14" r="1.8" fill="#ffffff"/>
+  <!-- football at base -->
+  <circle cx="16" cy="29" r="3" fill="none" stroke="#64c9ff" stroke-width="1.2"/>
+  <polygon points="16,25.5 17.1,26.4 16.7,27.7 15.3,27.7 14.9,26.4" fill="#64c9ff"/>
+</svg>
