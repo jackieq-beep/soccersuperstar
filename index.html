@@ -9,6 +9,15 @@
   <meta name="author" content="Real Freestyle Soccer">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.simface.com/">
+  <link rel="alternate" hreflang="en" href="https://www.simface.com/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.simface.com/zh-cn/">
+  <link rel="alternate" hreflang="es" href="https://www.simface.com/es/">
+  <link rel="alternate" hreflang="pt" href="https://www.simface.com/pt/">
+  <link rel="alternate" hreflang="fr" href="https://www.simface.com/fr/">
+  <link rel="alternate" hreflang="ar" href="https://www.simface.com/ar/">
+  <link rel="alternate" hreflang="id" href="https://www.simface.com/id/">
+  <link rel="alternate" hreflang="ja" href="https://www.simface.com/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://www.simface.com/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Soccer Superstar">
@@ -22,11 +31,9 @@
   <meta name="twitter:description" content="Play the free mobile football game with flick controls, curved shots, free kicks, offline play, and championship events.">
   <meta name="twitter:image" content="https://www.simface.com/assets/images/soccer-superstar-hero-trophy.webp">
 
-  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="preload" href="/assets/fonts/barlow-condensed-800.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
 
   <script type="application/ld+json">
   {
@@ -137,6 +144,19 @@
         <a href="#news">News</a>
         <a href="#faq">FAQ</a>
         <a href="#play" class="nav-cta">Play Now</a>
+        <details class="lang-picker">
+          <summary aria-label="Language"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span class="lang-current">EN</span></summary>
+          <ul class="lang-menu">
+            <li><a href="/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li>
+            <li><a href="/zh-cn/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-cn">简体中文</a></li>
+            <li><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+            <li><a href="/pt/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+            <li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+            <li><a href="/ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li>
+            <li><a href="/id/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          </ul>
+        </details>
       </nav>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -166,7 +186,7 @@
           </ul>
         </div>
         <div class="hero-media frame-cut">
-          <img src="assets/images/soccer-superstar-hero-trophy.webp" alt="Soccer Superstar football heroes standing around a gold trophy in a purple lit stadium" width="610" height="341" fetchpriority="high">
+          <img src="/assets/images/soccer-superstar-hero-trophy.webp" alt="Soccer Superstar football heroes standing around a gold trophy in a purple lit stadium" width="610" height="341" fetchpriority="high">
         </div>
       </section>
 
@@ -263,28 +283,28 @@
         </div>
         <div class="feature-grid">
           <article class="feature-card frame-cut">
-            <img src="assets/images/soccer-superstar-player-customization-locker-room.webp" alt="Soccer Superstar player customization screen showing a number 10 footballer in a yellow jersey with boot options" width="507" height="898" loading="lazy">
+            <img src="/assets/images/soccer-superstar-player-customization-locker-room.webp" alt="Soccer Superstar player customization screen showing a number 10 footballer in a yellow jersey with boot options" width="507" height="898" loading="lazy">
             <div class="feature-card-copy">
               <h3>Player Customization</h3>
               <p>Create your own look with standout kits, boots, and visual styling using the latest motion capture technology of real star players, then take your favorite setup onto the pitch.</p>
             </div>
           </article>
           <article class="feature-card frame-cut">
-            <img src="assets/images/soccer-superstar-curled-shot-matchplay.webp" alt="Soccer Superstar curved shot gameplay with a light blue player whipping the ball toward goal" width="503" height="862" loading="lazy">
+            <img src="/assets/images/soccer-superstar-curled-shot-matchplay.webp" alt="Soccer Superstar curved shot gameplay with a light blue player whipping the ball toward goal" width="503" height="862" loading="lazy">
             <div class="feature-card-copy">
               <h3>Super Simple Controls</h3>
               <p>Just flick your finger across the screen to pass, shoot, curve, and power the ball past defenders. Easy to learn — hard to master.</p>
             </div>
           </article>
           <article class="feature-card frame-cut">
-            <img src="assets/images/soccer-superstar-bicycle-kick-finish.webp" alt="Soccer Superstar bicycle kick sequence in front of goal with defenders and stadium crowd" width="511" height="888" loading="lazy">
+            <img src="/assets/images/soccer-superstar-bicycle-kick-finish.webp" alt="Soccer Superstar bicycle kick sequence in front of goal with defenders and stadium crowd" width="511" height="888" loading="lazy">
             <div class="feature-card-copy">
               <h3>Immersive 3D Match Action</h3>
               <p>Powered by an advanced 3D mobile engine with intelligent game AI. Realistic ball physics and dynamic match drama that gets more challenging as you level up.</p>
             </div>
           </article>
           <article class="feature-card frame-cut">
-            <img src="assets/images/soccer-superstar-awards-ceremony-golden-ball.webp" alt="Soccer Superstar awards ceremony scene with a pink haired player holding a golden football trophy" width="511" height="913" loading="lazy">
+            <img src="/assets/images/soccer-superstar-awards-ceremony-golden-ball.webp" alt="Soccer Superstar awards ceremony scene with a pink haired player holding a golden football trophy" width="511" height="913" loading="lazy">
             <div class="feature-card-copy">
               <h3>Star Players to Unlock</h3>
               <p>Progress through levels, earn reward packs, and collect player shards to unlock standout star footballers. Chase the feeling of becoming the hero in every match.</p>
@@ -329,7 +349,7 @@
           <a href="#play" class="button button-primary">Download Free</a>
         </div>
         <div class="showcase-media frame-cut">
-          <img src="assets/images/soccer-superstar-argentina-vs-portugal-trophy-match.webp" alt="Soccer Superstar stadium scene showing number 10 and number 7 players walking toward a trophy before kickoff" width="2048" height="1146" loading="lazy">
+          <img src="/assets/images/soccer-superstar-argentina-vs-portugal-trophy-match.webp" alt="Soccer Superstar stadium scene showing number 10 and number 7 players walking toward a trophy before kickoff" width="2048" height="1146" loading="lazy">
         </div>
       </section>
 
@@ -341,15 +361,15 @@
         </div>
         <div class="gallery-grid">
           <figure class="gallery-card frame-cut landscape">
-            <img src="assets/images/soccer-superstar-portugal-free-kick-stadium.webp" alt="Soccer Superstar Portugal free kick scene against Argentina with crowd flares inside a football stadium" width="2048" height="1155" loading="lazy">
+            <img src="/assets/images/soccer-superstar-portugal-free-kick-stadium.webp" alt="Soccer Superstar Portugal free kick scene against Argentina with crowd flares inside a football stadium" width="2048" height="1155" loading="lazy">
             <figcaption>Step up under pressure and bend the ball past the wall.</figcaption>
           </figure>
           <figure class="gallery-card frame-cut portrait">
-            <img src="assets/images/soccer-superstar-free-kick-wall-challenge.webp" alt="Soccer Superstar white shirt player taking a free kick over a defensive wall toward goal" width="507" height="863" loading="lazy">
+            <img src="/assets/images/soccer-superstar-free-kick-wall-challenge.webp" alt="Soccer Superstar white shirt player taking a free kick over a defensive wall toward goal" width="507" height="863" loading="lazy">
             <figcaption>Master free kicks and score from impossible angles.</figcaption>
           </figure>
           <figure class="gallery-card frame-cut portrait">
-            <img src="assets/images/soccer-superstar-training-target-shot.webp" alt="Soccer Superstar target training challenge with a hand icon guiding a curved shot path" width="503" height="910" loading="lazy">
+            <img src="/assets/images/soccer-superstar-training-target-shot.webp" alt="Soccer Superstar target training challenge with a hand icon guiding a curved shot path" width="503" height="910" loading="lazy">
             <figcaption>Sharpen your technique and build match winning confidence.</figcaption>
           </figure>
         </div>
@@ -388,7 +408,7 @@
 
       <!-- ═══ NEWS ═══ -->
       <!-- To add a post: copy one <article class="news-card">, put it first, update the image, text and data-ends (YYYY-MM-DD). -->
-      <section class="news section" id="news">
+      <section class="news section" id="news" data-ended-label="Event ended">
         <div class="section-heading">
           <p class="eyebrow">LATEST NEWS</p>
           <h2>WHAT'S HAPPENING IN THE GAME</h2>
@@ -397,7 +417,7 @@
         <div class="news-grid">
           <article class="news-card frame-cut" data-ends="2026-11-14">
             <div class="news-media">
-              <img src="assets/images/soccer-superstar-news-road-to-the-championship-daily-chapters.webp" alt="Four Soccer Superstar footballers waiting in a stadium tunnel lined with trophies" width="407" height="132" loading="lazy">
+              <img src="/assets/images/soccer-superstar-news-road-to-the-championship-daily-chapters.webp" alt="Four Soccer Superstar footballers waiting in a stadium tunnel lined with trophies" width="407" height="132" loading="lazy">
               <span class="news-badge">Ends Nov 14</span>
             </div>
             <div class="news-copy">
@@ -408,7 +428,7 @@
           </article>
           <article class="news-card frame-cut" data-ends="2026-11-15">
             <div class="news-media">
-              <img src="assets/images/soccer-superstar-news-halloween-trick-kick-claim-the-night.webp" alt="Soccer Superstar player volleying a flaming skull ball in a haunted Halloween stadium with pumpkins and ghosts" width="822" height="450" loading="lazy">
+              <img src="/assets/images/soccer-superstar-news-halloween-trick-kick-claim-the-night.webp" alt="Soccer Superstar player volleying a flaming skull ball in a haunted Halloween stadium with pumpkins and ghosts" width="822" height="450" loading="lazy">
               <span class="news-badge">Ends Nov 15</span>
             </div>
             <div class="news-copy">
@@ -438,10 +458,10 @@
           </div>
           <div class="about-stack">
             <div class="mini-card frame-cut">
-              <img src="assets/images/soccer-superstar-curled-shot-matchplay.webp" alt="Curved shot gameplay sequence from Soccer Superstar showing football action near the penalty box" width="503" height="862" loading="lazy">
+              <img src="/assets/images/soccer-superstar-curled-shot-matchplay.webp" alt="Curved shot gameplay sequence from Soccer Superstar showing football action near the penalty box" width="503" height="862" loading="lazy">
             </div>
             <div class="mini-card frame-cut">
-              <img src="assets/images/soccer-superstar-awards-ceremony-golden-ball.webp" alt="Soccer Superstar player in formal wear holding a gold trophy in front of a branded backdrop" width="511" height="913" loading="lazy">
+              <img src="/assets/images/soccer-superstar-awards-ceremony-golden-ball.webp" alt="Soccer Superstar player in formal wear holding a gold trophy in front of a branded backdrop" width="511" height="913" loading="lazy">
             </div>
           </div>
         </div>
@@ -852,13 +872,38 @@
     }
 
     // News: mark events as ended once their end date has passed
+    const newsSection = document.getElementById('news');
+    const endedLabel = (newsSection && newsSection.dataset.endedLabel) || 'Event ended';
     document.querySelectorAll('.news-card[data-ends]').forEach(card => {
       const end = new Date(card.dataset.ends + 'T23:59:59');
       if (Date.now() > end.getTime()) {
         card.classList.add('news-ended');
         const badge = card.querySelector('.news-badge');
-        if (badge) badge.textContent = 'Event ended';
+        if (badge) badge.textContent = endedLabel;
       }
+    });
+
+    // Languages: remember the visitor's choice; on a first visit to the English home page,
+    // send them to their phone/browser language if we have it.
+    const LANGS = { zh: 'zh-cn', es: 'es', pt: 'pt', fr: 'fr', ar: 'ar', id: 'id', ja: 'ja' };
+    const store = {
+      get() { try { return localStorage.getItem('ss-lang'); } catch (e) { return null; } },
+      set(v) { try { localStorage.setItem('ss-lang', v); } catch (e) {} }
+    };
+    document.querySelectorAll('.lang-menu a[data-lang]').forEach(a => {
+      a.addEventListener('click', () => store.set(a.dataset.lang));
+    });
+    if (location.pathname === '/' && !store.get() && !/bot|crawl|spider/i.test(navigator.userAgent)) {
+      const prefs = navigator.languages || [navigator.language || ''];
+      for (const l of prefs) {
+        const code = String(l).toLowerCase().split('-')[0];
+        if (code === 'en') break;
+        if (LANGS[code]) { location.replace('/' + LANGS[code] + '/' + location.hash); break; }
+      }
+    }
+    // Close the language menu when clicking elsewhere
+    document.addEventListener('click', e => {
+      document.querySelectorAll('.lang-picker[open]').forEach(d => { if (!d.contains(e.target)) d.removeAttribute('open'); });
     });
 
     // Legal modals

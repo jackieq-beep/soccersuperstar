@@ -1,4 +1,13 @@
 /* ─────────────────────────────────────────────
+   FONTS (self-hosted so the site loads in regions where Google Fonts is blocked)
+───────────────────────────────────────────── */
+@font-face { font-family: 'Barlow Condensed'; src: url('/assets/fonts/barlow-condensed-400.woff') format('woff'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Barlow Condensed'; src: url('/assets/fonts/barlow-condensed-600.woff') format('woff'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Barlow Condensed'; src: url('/assets/fonts/barlow-condensed-700.woff') format('woff'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Barlow Condensed'; src: url('/assets/fonts/barlow-condensed-800.woff') format('woff'); font-weight: 800; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/assets/fonts/inter-variable.woff') format('woff'); font-weight: 400 700; font-display: swap; }
+
+/* ─────────────────────────────────────────────
    TOKENS
 ───────────────────────────────────────────── */
 :root {
@@ -1142,6 +1151,87 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 /* ─────────────────────────────────────────────
+   LANGUAGE PICKER
+───────────────────────────────────────────── */
+.lang-picker { position: relative; }
+
+.lang-picker summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--muted);
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: 0.06em;
+  font-size: 1rem;
+}
+.lang-picker summary::-webkit-details-marker { display: none; }
+.lang-picker summary:hover,
+.lang-picker[open] summary { color: var(--text); border-color: rgba(100,201,255,0.4); }
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-end: 0;
+  min-width: 190px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  z-index: 40;
+}
+.lang-menu a {
+  display: block;
+  padding: 9px 12px;
+  color: var(--muted);
+  font-family: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Hiragino Sans', 'Noto Sans', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.lang-menu a:hover { color: var(--text); background: var(--panel-2); }
+.lang-menu a[aria-current="true"] { color: var(--lime); }
+
+/* ─────────────────────────────────────────────
+   PER-LANGUAGE TYPOGRAPHY
+───────────────────────────────────────────── */
+html[lang="zh-Hans"] body { font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', 'Noto Sans CJK SC', sans-serif; }
+html[lang="ja"] body { font-family: 'Inter', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, 'Noto Sans JP', 'Noto Sans CJK JP', sans-serif; }
+html[lang="ar"] body { font-family: 'Inter', 'Segoe UI', Tahoma, 'Geeza Pro', 'Noto Sans Arabic', sans-serif; }
+
+/* Chinese and Japanese: no letter-spacing tricks, a little more line height */
+html[lang="zh-Hans"] :is(h1, h2, h3, .eyebrow, .nav a, .button, .brand-kicker, .news-badge, .news-tag, .strip-track span, strong),
+html[lang="ja"] :is(h1, h2, h3, .eyebrow, .nav a, .button, .brand-kicker, .news-badge, .news-tag, .strip-track span, strong) {
+  letter-spacing: 0.02em;
+}
+html[lang="zh-Hans"] h1, html[lang="ja"] h1 { line-height: 1.1; }
+html[lang="zh-Hans"] .hero h1, html[lang="ja"] .hero h1 { font-size: clamp(2.6rem, 5.4vw, 5.2rem); }
+html[lang="zh-Hans"] :is(h2, h3), html[lang="ja"] :is(h2, h3) { line-height: 1.25; }
+html[lang="zh-Hans"] p, html[lang="ja"] p { line-height: 1.8; }
+
+/* Arabic: letter-spacing breaks joined Arabic letters, so turn it off everywhere */
+html[lang="ar"] *, html[lang="ar"] *::before, html[lang="ar"] *::after { letter-spacing: 0 !important; }
+html[lang="ar"] :is(h1, h2, h3) { line-height: 1.3; }
+html[lang="ar"] p { line-height: 1.85; }
+html[dir="rtl"] .news-badge { left: auto; right: 14px; }
+html[dir="rtl"] .strip-track { animation-direction: reverse; }
+html[dir="rtl"] .brand-logo, html[dir="rtl"] .brand-kicker { direction: ltr; text-align: right; }
+
+/* Keep brand name, numbers and store names readable inside right-to-left text */
+html[dir="rtl"] .hero-stats strong,
+html[dir="rtl"] .proof-stat strong { direction: ltr; unicode-bidi: isolate; }
+html[dir="rtl"] .review-name { unicode-bidi: plaintext; }
+/* Slanted text doesn't suit Arabic, Chinese or Japanese */
+html[lang="ar"] .review-card blockquote p,
+html[lang="zh-Hans"] .review-card blockquote p,
+html[lang="ja"] .review-card blockquote p { font-style: normal; }
+
+/* ─────────────────────────────────────────────
    RESPONSIVE — TABLET
 ───────────────────────────────────────────── */
 @media (max-width: 1100px) {
@@ -1208,10 +1298,13 @@ img { display: block; max-width: 100%; height: auto; }
   }
 
   .topbar > .brand {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: calc(100% - 48px);
+  }
+
+  .nav-toggle {
+    position: absolute;
+    top: 22px;
+    inset-inline-end: 0;
   }
 
   .nav-toggle {
@@ -1230,8 +1323,14 @@ img { display: block; max-width: 100%; height: auto; }
   }
 
   .nav.nav-open {
-    max-height: 500px;
+    max-height: 800px;
     padding: 18px 0 8px;
+  }
+
+  .lang-menu {
+    position: static;
+    margin-top: 8px;
+    box-shadow: none;
   }
 
   .hero {
@@ -1239,6 +1338,7 @@ img { display: block; max-width: 100%; height: auto; }
   }
 
   .hero h1 { font-size: clamp(3rem, 18vw, 5rem); }
+  html[lang="zh-Hans"] .hero h1, html[lang="ja"] .hero h1 { font-size: clamp(2.2rem, 11vw, 3.6rem); }
 
   .hero-stats,
   .about-stack,
