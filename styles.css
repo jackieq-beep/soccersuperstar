@@ -80,13 +80,17 @@ img { display: block; max-width: 100%; height: auto; }
   pointer-events: none;
 }
 
+/* Faint football pitch markings behind the page (stays still while scrolling) */
 .site-shell::before {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.7));
-  mask-image: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.7));
+  background: url('/assets/images/pitch-lines.svg') center 55% / min(1500px, 150vw) auto no-repeat;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .site-shell::before {
+    background-image: url('/assets/images/pitch-lines-vertical.svg');
+    background-position: center;
+    background-size: contain;
+  }
 }
 
 .site-shell::after {
@@ -857,112 +861,61 @@ img { display: block; max-width: 100%; height: auto; }
   position: relative;
 }
 
+.social .section-heading {
+  text-align: center;
+  justify-items: center;
+}
+.social .section-subtext { margin: 0 auto; }
+
 .social-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: var(--max);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px 72px;
   margin: 0 auto;
 }
 
 .social-card {
   display: flex;
   flex-direction: column;
-  padding: 32px 32px 28px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  text-decoration: none;
+  align-items: center;
+  text-align: center;
   color: var(--text);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+  text-decoration: none;
+  transition: transform 0.25s;
 }
-
-/* Coloured top accent bar */
-.social-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  transition: height 0.25s;
-}
-.social-card--fb::before { background: #1877f2; }
-.social-card--ig::before { background: linear-gradient(90deg, #f58529, #dd2a7b, #8134af); }
-.social-card--tt::before { background: linear-gradient(90deg, #69c9d0, #ee1d52); }
-
-/* Faint glow orb in corner */
-.social-card::after {
-  content: "";
-  position: absolute;
-  bottom: -60px; right: -60px;
-  width: 200px; height: 200px;
-  border-radius: 50%;
-  opacity: 0.07;
-  transition: opacity 0.3s, transform 0.3s;
-  pointer-events: none;
-}
-.social-card--fb::after { background: #1877f2; }
-.social-card--ig::after { background: #dd2a7b; }
-.social-card--tt::after { background: #69c9d0; }
-
 .social-card:hover,
-.social-card:focus-visible {
-  transform: translateY(-5px);
-  border-color: rgba(255,255,255,0.2);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
-}
-.social-card:hover::before { height: 4px; }
-.social-card:hover::after  { opacity: 0.15; transform: scale(1.2); }
+.social-card:focus-visible { transform: translateY(-6px); }
+.social-card:focus-visible { outline: none; }
 
-/* Top row: platform badge + follow CTA */
-.social-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 32px;
+.social-icon {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  color: #fff;
+  transition: box-shadow 0.25s;
 }
+.social-icon svg { width: 52px; height: 52px; }
 
-.social-badge {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.social-card--fb .social-badge { color: #5a9fd4; }
-.social-card--ig .social-badge { color: #e0708a; }
-.social-card--tt .social-badge { color: #69c9d0; }
+.social-card--fb .social-icon { background: #1877f2; }
+.social-card--ig .social-icon { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%); }
+.social-card--tt .social-icon { background: #000; border: 1px solid rgba(255,255,255,0.18); }
+.social-card--tt .social-icon svg { filter: drop-shadow(-2px -1px 0 #25f4ee) drop-shadow(2px 1px 0 #fe2c55); }
 
-.social-follow-btn {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  border: 1px solid var(--line);
-  padding: 5px 13px;
-  border-radius: 2px;
-  transition: color 0.2s, border-color 0.2s;
-}
-.social-card:hover .social-follow-btn {
-  color: var(--lime);
-  border-color: var(--lime);
-}
-
-/* Big stat number */
-.social-stat-row {
-  margin-bottom: 20px;
-}
+.social-card--fb:hover .social-icon,
+.social-card--fb:focus-visible .social-icon { box-shadow: 0 0 0 6px rgba(24,119,242,0.25), 0 0 50px rgba(24,119,242,0.5); }
+.social-card--ig:hover .social-icon,
+.social-card--ig:focus-visible .social-icon { box-shadow: 0 0 0 6px rgba(214,36,159,0.25), 0 0 50px rgba(214,36,159,0.5); }
+.social-card--tt:hover .social-icon,
+.social-card--tt:focus-visible .social-icon { box-shadow: 0 0 0 6px rgba(37,244,238,0.2), 0 0 50px rgba(254,44,85,0.4); }
 
 .social-stat strong {
   display: block;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(3rem, 5vw, 4.2rem);
+  font-size: 2.4rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.01em;
@@ -979,14 +932,6 @@ img { display: block; max-width: 100%; height: auto; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
-}
-
-.social-handle {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-  padding-top: 18px;
 }
 
 /* ─────────────────────────────────────────────
@@ -1298,10 +1243,6 @@ html[lang="ja"] .review-card blockquote p { font-style: normal; }
   .hero-media { order: -1; }
   .about-stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  .social-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -1405,7 +1346,6 @@ html[lang="ja"] .review-card blockquote p { font-style: normal; }
   .steps-grid,
   .modes-grid,
   .reviews-grid,
-  .social-grid,
   .intro-columns {
     grid-template-columns: 1fr;
   }
@@ -1419,6 +1359,11 @@ html[lang="ja"] .review-card blockquote p { font-style: normal; }
   }
 
   .section { padding: 64px 0; }
+
+  .social-grid { gap: 24px 28px; }
+  .social-icon { width: 76px; height: 76px; }
+  .social-icon svg { width: 36px; height: 36px; }
+  .social-stat strong { font-size: 1.8rem; }
 
   .footer-nav {
     grid-template-columns: repeat(2, 1fr);
