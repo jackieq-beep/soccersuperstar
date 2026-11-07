@@ -1478,3 +1478,10 @@ html[lang="ja"] .review-card blockquote p { font-style: normal; }
 @supports not (aspect-ratio: 16 / 9) {
   @media (max-width: 760px) { .intro-media { height: 52vw; } }
 }
+
+/* ─────────────────────────────────────────────
+   LINE BREAKS
+───────────────────────────────────────────── */
+.brand-name, .brand-logo { white-space: nowrap; }
+h1, h2, h3, .eyebrow { text-wrap: balance; }
+p, li, figcaption { text-wrap: pretty; }
