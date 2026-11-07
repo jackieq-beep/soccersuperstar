@@ -36,12 +36,12 @@ LANGS = {
 KEEP = {
     "SOCCER SUPERSTAR", "Soccer Superstar", "Real Freestyle Soccer", "Facebook", "Instagram", "TikTok",
     "Google Play", "App Store", "English", "简体中文", "Español", "Português", "Français", "العربية",
-    "Bahasa Indonesia", "日本語", "EN",
+    "Bahasa Indonesia", "日本語", "EN", "Soccer Superstar:",
 }
 
 TOKEN = re.compile(r"<!--.*?-->|<(script|style|svg)\b.*?</\1\s*>|<[^>]+>|[^<]+", re.S | re.I)
 ATTRS = re.compile(r'\b(alt|aria-label|data-ended-label|placeholder|title)="([^"]*)"')
-META = re.compile(r'(<meta\s+(?:name|property)="(?:description|og:title|og:description|twitter:title|twitter:description)"\s+content=")([^"]*)(")')
+META = re.compile(r'(<meta\s+(?:name|property)="(?:description|og:title|og:description|twitter:title|twitter:description|og:image:alt|twitter:image:alt)"\s+content=")([^"]*)(")')
 TITLE = re.compile(r"(<title>)(.*?)(</title>)", re.S)
 LDJSON = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.S)
 MODALS = re.compile(r"\s*<!-- ═══ PRIVACY POLICY MODAL ═══ -->.*?(?=\n\s*<script>)", re.S)
@@ -143,6 +143,7 @@ def build(src, code, table):
     page = page.replace(f'<link rel="canonical" href="{SITE}/">', f'<link rel="canonical" href="{url}">', 1)
     page = page.replace(f'<meta property="og:url" content="{SITE}/">', f'<meta property="og:url" content="{url}">', 1)
     page = page.replace('<meta property="og:locale" content="en_US">', f'<meta property="og:locale" content="{locale}">', 1)
+    page = page.replace(f'<meta property="og:locale:alternate" content="{locale}">', '<meta property="og:locale:alternate" content="en_US">', 1)
     page = LDJSON.sub(lambda m: m.group(1) + translate_ld(m.group(2), t, url, lang) + m.group(3), page, 1)
 
     page = MODALS.sub("", page, 1)  # English-only legal pop-ups are not needed on translated pages

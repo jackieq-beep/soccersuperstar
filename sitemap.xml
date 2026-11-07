@@ -122,13 +122,19 @@
   </url>
   <url>
     <loc>https://www.simface.com/privacy-policy/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.simface.com/terms-of-service/</loc>
     <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.simface.com/cookie-policy/</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
