@@ -464,16 +464,6 @@ img { display: block; max-width: 100%; height: auto; }
   gap: 12px;
 }
 
-.step-num {
-  font-family: 'Barlow Condensed', Impact, sans-serif;
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1;
-  color: var(--lime);
-  opacity: 0.7;
-  letter-spacing: -0.02em;
-}
-
 .step-card h3 {
   margin: 0;
   font-size: 1.5rem;
