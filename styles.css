@@ -297,9 +297,27 @@ img { display: block; max-width: 100%; height: auto; }
 ───────────────────────────────────────────── */
 .store-links {
   display: flex;
-  gap: 14px;
+  align-items: center;
+  gap: 16px;
   flex-wrap: wrap;
   margin: 0 0 28px;
+}
+
+/* Official store badges: shown as supplied, same height, no recolouring */
+.store-badge {
+  display: inline-block;
+  line-height: 0;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.store-badge img { height: 54px; width: auto; }
+.store-badge:hover,
+.store-badge:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.45); }
+.store-badge:focus-visible { outline: 2px solid var(--lime); outline-offset: 4px; }
+
+@media (max-width: 760px) {
+  .store-badge img { height: 48px; }
+  .store-links { gap: 12px; }
 }
 
 /* ─────────────────────────────────────────────
