@@ -805,6 +805,34 @@
     document.addEventListener('click', e => {
       document.querySelectorAll('.lang-picker[open]').forEach(d => { if (!d.contains(e.target)) d.removeAttribute('open'); });
     });
+
+    // Legal modals
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (!modal) return;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      modal.querySelector('.legal-modal-close').focus();
+    }
+    function closeModal(modal) {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('a[href="#privacy"], a[href="#terms"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        openModal(link.getAttribute('href').slice(1));
+      });
+    });
+    document.querySelectorAll('.legal-modal').forEach(modal => {
+      modal.querySelector('.legal-modal-close').addEventListener('click', () => closeModal(modal));
+      modal.querySelector('.legal-modal-overlay').addEventListener('click', () => closeModal(modal));
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.legal-modal:not([hidden])').forEach(closeModal);
+      }
+    });
   </script>
 </body>
 </html>
