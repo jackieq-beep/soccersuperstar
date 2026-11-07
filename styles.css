@@ -326,6 +326,23 @@ img { display: block; max-width: 100%; height: auto; }
   margin-bottom: 2px;
 }
 
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-self: start;
+  margin: 2px 0 22px;
+  color: var(--muted);
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.hero-link:hover,
+.hero-link:focus-visible { color: var(--text); border-color: var(--lime); }
+
 .hero-stats span { color: var(--muted); font-size: 0.95rem; }
 
 /* ─────────────────────────────────────────────
@@ -1215,8 +1232,7 @@ html[dir="rtl"] .strip-track { animation-direction: reverse; }
 html[dir="rtl"] .brand-logo, html[dir="rtl"] .brand-kicker { direction: ltr; text-align: right; }
 
 /* Keep brand name, numbers and store names readable inside right-to-left text */
-html[dir="rtl"] .hero-stats strong,
-html[dir="rtl"] .proof-stat strong { direction: ltr; unicode-bidi: isolate; }
+html[dir="rtl"] .hero-stats strong { direction: ltr; unicode-bidi: isolate; text-align: right; }
 html[dir="rtl"] .review-name { unicode-bidi: plaintext; }
 /* Slanted text doesn't suit Arabic, Chinese or Japanese */
 html[lang="ar"] .review-card blockquote p,
