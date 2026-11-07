@@ -132,13 +132,10 @@
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#features">Features</a>
-        <a href="#how-to-play">How to Play</a>
-        <a href="#gallery">Gallery</a>
         <a href="#modes">Game Modes</a>
-        <a href="#reviews">Reviews</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#news">News</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a href="#social">Follow Us</a>
         <a href="#play" class="nav-cta">Play Now</a>
       </nav>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -390,6 +387,40 @@
             <h3>Training &amp; Skills</h3>
             <p>Sharpen your technique through dedicated training challenges. Hit targets, practice curves, and build the muscle memory that wins matches when it counts.</p>
           </div>
+        </div>
+      </section>
+
+      <!-- ═══ NEWS ═══ -->
+      <!-- To add a post: copy one <article class="news-card">, put it first, update the image, text and data-ends (YYYY-MM-DD). -->
+      <section class="news section" id="news">
+        <div class="section-heading">
+          <p class="eyebrow">LATEST NEWS</p>
+          <h2>WHAT'S HAPPENING IN THE GAME</h2>
+          <p class="section-subtext">Live events, new chapters, and limited-time rewards. Jump in before they're gone.</p>
+        </div>
+        <div class="news-grid">
+          <article class="news-card frame-cut" data-ends="2026-11-14">
+            <div class="news-media">
+              <img src="assets/images/soccer-superstar-news-road-to-the-championship-daily-chapters.webp" alt="Four Soccer Superstar footballers waiting in a stadium tunnel lined with trophies" width="407" height="132" loading="lazy">
+              <span class="news-badge">Ends Nov 14</span>
+            </div>
+            <div class="news-copy">
+              <p class="news-tag">Event</p>
+              <h3>Road to the Championship: New Daily Rotating Chapters</h3>
+              <p>Road to the Championship just got more exciting with new Daily Rotating Chapters! Hit the pitch daily to experience a fresh set of stages and unique challenges. Test your skills as the chapters change every 24 hours. Conquer the daily rotation to earn exclusive rewards, and prove you have what it takes to become the ultimate champion. Don't miss a single day of the action!</p>
+            </div>
+          </article>
+          <article class="news-card frame-cut" data-ends="2026-11-15">
+            <div class="news-media">
+              <img src="assets/images/soccer-superstar-news-halloween-trick-kick-claim-the-night.webp" alt="Soccer Superstar player volleying a flaming skull ball in a haunted Halloween stadium with pumpkins and ghosts" width="822" height="450" loading="lazy">
+              <span class="news-badge">Ends Nov 15</span>
+            </div>
+            <div class="news-copy">
+              <p class="news-tag">Event</p>
+              <h3>Trick, Kick, and Claim the Night!</h3>
+              <p>The stadium turns spooky as Halloween magic takes over the field! Step onto a haunting pitch for daily live matches, grab glowing candles scattered across the grass for extra rewards, and power your faction's daily score to claim ultimate victory. Will you conquer the dark or get spooked? Step up, light the night, and score your way to glory!</p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -648,6 +679,7 @@
             <a href="#how-to-play">How to Play</a>
             <a href="#modes">Game Modes</a>
             <a href="#gallery">Gallery</a>
+            <a href="#news">News</a>
           </div>
           <div class="footer-nav-col">
             <p class="footer-nav-heading">Company</p>
@@ -822,6 +854,16 @@
         nav.classList.toggle('nav-open');
       });
     }
+
+    // News: mark events as ended once their end date has passed
+    document.querySelectorAll('.news-card[data-ends]').forEach(card => {
+      const end = new Date(card.dataset.ends + 'T23:59:59');
+      if (Date.now() > end.getTime()) {
+        card.classList.add('news-ended');
+        const badge = card.querySelector('.news-badge');
+        if (badge) badge.textContent = 'Event ended';
+      }
+    });
 
     // Legal modals
     function openModal(id) {
