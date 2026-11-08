@@ -493,6 +493,12 @@
     </footer>
   </div>
 
+  <!-- ═══ COOKIE NOTICE (first visit only) ═══ -->
+  <div class="cookie-notice" id="cookie-notice" role="region" aria-label="إشعار ملفات تعريف الارتباط" data-nosnippet hidden>
+    <p>لا يستخدم هذا الموقع ملفات تعريف ارتباط للتتبع أو الإعلانات. إنه يتذكر لغتك فقط وأنك أغلقت هذه الرسالة. <a href="/cookie-policy/">سياسة ملفات تعريف الارتباط</a></p>
+    <button type="button" class="button button-primary">حسنًا</button>
+  </div>
+
   <script>
     // Full-screen menu
     const toggle = document.querySelector('.nav-toggle');
@@ -507,6 +513,22 @@
       nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
       document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('nav-open')) { setMenu(false); toggle.focus(); } });
     }
+
+    // Cookie notice: shown until the visitor closes it
+    (function () {
+      const box = document.getElementById('cookie-notice');
+      if (!box) return;
+      let seen = null;
+      try { seen = localStorage.getItem('ss-notice'); } catch (e) {}
+      if (seen) return;
+      box.hidden = false;
+      setTimeout(() => box.classList.add('show'), 600);
+      box.querySelector('button').addEventListener('click', () => {
+        try { localStorage.setItem('ss-notice', '1'); } catch (e) {}
+        box.classList.remove('show');
+        setTimeout(() => { box.hidden = true; }, 350);
+      });
+    })();
 
     // Header gets a background once you scroll
     const topbar = document.querySelector('.topbar');

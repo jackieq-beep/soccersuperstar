@@ -480,6 +480,12 @@
     </footer>
   </div>
 
+  <!-- ═══ COOKIE NOTICE (first visit only) ═══ -->
+  <div class="cookie-notice" id="cookie-notice" role="region" aria-label="Cookie notice" data-nosnippet hidden>
+    <p>This site doesn't use tracking or advertising cookies. It only remembers your language and that you closed this message. <a href="/cookie-policy/">Cookie Policy</a></p>
+    <button type="button" class="button button-primary">Got it</button>
+  </div>
+
   <!-- ═══ PRIVACY POLICY MODAL ═══ -->
   <div id="privacy" class="legal-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" data-nosnippet hidden>
     <div class="legal-modal-overlay"></div>
@@ -626,6 +632,22 @@
       nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
       document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('nav-open')) { setMenu(false); toggle.focus(); } });
     }
+
+    // Cookie notice: shown until the visitor closes it
+    (function () {
+      const box = document.getElementById('cookie-notice');
+      if (!box) return;
+      let seen = null;
+      try { seen = localStorage.getItem('ss-notice'); } catch (e) {}
+      if (seen) return;
+      box.hidden = false;
+      setTimeout(() => box.classList.add('show'), 600);
+      box.querySelector('button').addEventListener('click', () => {
+        try { localStorage.setItem('ss-notice', '1'); } catch (e) {}
+        box.classList.remove('show');
+        setTimeout(() => { box.hidden = true; }, 350);
+      });
+    })();
 
     // Header gets a background once you scroll
     const topbar = document.querySelector('.topbar');
