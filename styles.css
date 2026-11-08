@@ -499,19 +499,8 @@ body.menu-open { overflow: hidden; }
 /* ─────────────────────────────────────────────
    HOW TO PLAY: numbered columns
 ───────────────────────────────────────────── */
-.steps-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(20px, 3vw, 44px); counter-reset: step; }
-.step-card { counter-increment: step; border-top: 1px solid var(--line); padding-top: 26px; }
-.step-card::before {
-  content: "0" counter(step);
-  display: block;
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: clamp(2.6rem, 4.4vw, 4rem);
-  line-height: 1;
-  margin-bottom: 26px;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(236, 235, 228, 0.55);
-}
+.steps-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(20px, 3vw, 44px); }
+.step-card { border-top: 1px solid var(--line); padding-top: 26px; }
 .step-card h3 { font-size: 1.02rem; margin-bottom: 10px; }
 .step-card p { color: var(--muted); font-size: 0.94rem; }
 
@@ -533,19 +522,14 @@ body.menu-open { overflow: hidden; }
 /* ─────────────────────────────────────────────
    GAME MODES: big text list
 ───────────────────────────────────────────── */
-.modes-grid { counter-reset: mode; border-bottom: 1px solid var(--line); }
+.modes-grid { border-bottom: 1px solid var(--line); }
 .mode-card {
-  counter-increment: mode;
   display: grid;
-  grid-template-columns: 70px minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: clamp(16px, 3vw, 48px);
   align-items: baseline;
   padding: clamp(26px, 3.4vw, 40px) 0;
   border-top: 1px solid var(--line);
-}
-.mode-card::before {
-  content: "0" counter(mode);
-  font-size: 0.78rem; letter-spacing: 0.1em; color: var(--muted);
 }
 .mode-icon { display: none; }
 .mode-card h3 {
@@ -803,8 +787,7 @@ html[lang="zh-Hans"] h1, html[lang="zh-Hans"] h2, html[lang="ja"] h1, html[lang=
   .feature-card-copy { padding-top: 0; }
 
   .steps-grid { grid-template-columns: 1fr; row-gap: 0; }
-  .step-card { display: grid; grid-template-columns: 64px 1fr; padding: 22px 0; }
-  .step-card::before { grid-row: span 2; font-size: 2.1rem; margin: 0; }
+  .step-card { padding: 22px 0; }
   .step-card h3 { margin-bottom: 6px; }
 
   .showcase, .about-grid { grid-template-columns: 1fr; }
