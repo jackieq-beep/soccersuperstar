@@ -562,6 +562,36 @@ html[dir="rtl"] .cta-logo { transform: translateX(-7%); }
 .footer-legal a:hover { color: var(--text); }
 
 /* ─────────────────────────────────────────────
+   COOKIE NOTICE
+───────────────────────────────────────────── */
+.cookie-notice {
+  position: fixed;
+  z-index: 60;
+  left: var(--gutter);
+  bottom: 24px;
+  max-width: 440px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  background: rgba(11, 15, 24, 0.96);
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.cookie-notice.show { opacity: 1; transform: none; }
+.cookie-notice[hidden] { display: none; }
+.cookie-notice p { font-size: 0.86rem; line-height: 1.5; color: var(--muted); }
+.cookie-notice a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.cookie-notice .button { flex-shrink: 0; min-height: 42px; padding: 0 20px; }
+html[dir="rtl"] .cookie-notice { left: auto; right: var(--gutter); }
+
+/* ─────────────────────────────────────────────
    404 PAGE
 ───────────────────────────────────────────── */
 .notfound { position: relative; z-index: 2; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 40px var(--gutter); }
@@ -678,6 +708,7 @@ html[lang="zh-Hans"] h1, html[lang="zh-Hans"] h2, html[lang="ja"] h1, html[lang=
   .social-row .social-grid { grid-column: 1; grid-row: auto; margin-top: 26px; }
   .cta { min-height: 0; }
   .footer-nav { grid-template-columns: 1fr 1fr; row-gap: 30px; }
+  .cookie-notice, html[dir="rtl"] .cookie-notice { left: 12px; right: 12px; bottom: 12px; max-width: none; padding: 16px; gap: 14px; }
 }
 
 /* ─────────────────────────────────────────────
@@ -686,5 +717,5 @@ html[lang="zh-Hans"] h1, html[lang="zh-Hans"] h2, html[lang="ja"] h1, html[lang=
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-link span { animation: none !important; }
-  .nav, .nav a, .mode-card h3, .feature-card img, .news-media img { transition: none !important; }
+  .cookie-notice, .nav, .nav a, .mode-card h3, .feature-card img, .news-media img { transition: none !important; }
 }
