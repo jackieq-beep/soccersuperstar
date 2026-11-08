@@ -101,7 +101,7 @@
         "operatingSystem": "Android, iOS",
         "isAccessibleForFree": true,
         "image": [
-          "https://www.simface.com/assets/images/soccer-superstar-hero-trophy.webp",
+          "https://www.simface.com/assets/images/soccer-superstar-hero-players.webp",
           "https://www.simface.com/assets/images/soccer-superstar-walkout-trophy-before-kickoff.webp",
           "https://www.simface.com/assets/images/soccer-superstar-player-customization-locker-room.webp"
         ],
@@ -196,9 +196,7 @@
       </nav>
     </header>
 
-    <div class="centerpiece" aria-hidden="true">
-      <img src="/assets/images/football-centerpiece.svg" alt="" width="520" height="520" fetchpriority="high">
-    </div>
+    <div class="pitch-bg" aria-hidden="true"></div>
 
     <main id="home">
 
@@ -218,13 +216,15 @@
             <li><strong>مجانية</strong><span>العب دون إنترنت في أي وقت</span></li>
           </ul>
         </div>
+        <div class="hero-art">
+          <img src="/assets/images/soccer-superstar-hero-players.webp" alt="أبطال كرة القدم في Soccer Superstar حول كأس ذهبية في ملعب بإضاءة بنفسجية" width="1220" height="682" fetchpriority="high">
+        </div>
         <a href="#how-to-play" class="hero-link">طريقة اللعب <span aria-hidden="true">↓</span></a>
       </section>
 
       <!-- ═══ OFFICIAL SITE SEO INTRO ═══ -->
       <section class="official-intro section" id="official-site">
         <div class="intro-panel frame-cut">
-          <img class="intro-media" src="/assets/images/soccer-superstar-hero-trophy.webp" alt="أبطال كرة القدم في Soccer Superstar حول كأس ذهبية في ملعب بإضاءة بنفسجية" width="610" height="341" loading="lazy">
           <p class="eyebrow">الموقع الرسمي لـ SOCCER SUPERSTAR</p>
           <h2>إثارة كرة القدم مجانًا على iOS وAndroid</h2>
           <p>Soccer Superstar هي لعبة كرة القدم الرسمية المجانية لمن يريد لحظات مباريات سريعة وتحكمًا بسيطًا بالسحب وأهدافًا تعتمد على المهارة على الجوال. قوّس تسديداتك حول المدافعين، وسجّل ركلات حرة حاسمة، وافتح نجوم كرة القدم، وواصل اللعب حتى دون اتصال.</p>
@@ -730,26 +730,12 @@
       document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('nav-open')) { setMenu(false); toggle.focus(); } });
     }
 
-    // Header gets a background once you scroll; the football fades back after the first screen
-    // and comes forward again at the download section.
+    // Header gets a background once you scroll
     const topbar = document.querySelector('.topbar');
-    const hero = document.querySelector('.hero');
-    const cta = document.getElementById('play');
     function onScroll() {
-      const y = window.scrollY || window.pageYOffset;
-      if (topbar) topbar.classList.toggle('scrolled', y > 30);
-      if (hero && cta) {
-        const vh = window.innerHeight;
-        const pastHero = hero.getBoundingClientRect().bottom < vh * 0.55;
-        const r = cta.getBoundingClientRect();
-        const foot = document.querySelector('.footer');
-        const wide = window.matchMedia('(min-width: 761px)').matches;  // on phones the ball would cover the text
-        const atCta = wide && r.top < vh * 0.45 && (!foot || foot.getBoundingClientRect().top > vh * 0.8);
-        document.body.classList.toggle('ball-dim', pastHero && !atCta);
-      }
+      if (topbar) topbar.classList.toggle('scrolled', (window.scrollY || window.pageYOffset) > 30);
     }
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
     onScroll();
 
     // ── Text fitting ─────────────────────────────────────────────

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 680"><g fill="none" stroke="#fff" stroke-opacity="0.06" stroke-width="2" vector-effect="non-scaling-stroke">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 680"><g fill="none" stroke="#fff" stroke-opacity="0.085" stroke-width="2" vector-effect="non-scaling-stroke">
 <rect x="25" y="25" width="1000" height="630"/><line x1="525" y1="25" x2="525" y2="655"/><circle cx="525" cy="340" r="91.5"/>
 <rect x="25" y="138.5" width="165" height="403"/><rect x="25" y="248.5" width="55" height="183"/><path d="M190 280a91.5 91.5 0 0 1 0 120"/>
 <rect x="860" y="138.5" width="165" height="403"/><rect x="970" y="248.5" width="55" height="183"/><path d="M860 280a91.5 91.5 0 0 0 0 120"/>
 <path d="M25 35a10 10 0 0 0 10-10M1015 25a10 10 0 0 0 10 10M25 645a10 10 0 0 1 10 10M1015 655a10 10 0 0 1 10-10"/>
-</g><g fill="#fff" fill-opacity="0.06"><circle cx="525" cy="340" r="3"/><circle cx="135" cy="340" r="3"/><circle cx="915" cy="340" r="3"/></g></svg>
+</g><g fill="#fff" fill-opacity="0.1"><circle cx="525" cy="340" r="3"/><circle cx="135" cy="340" r="3"/><circle cx="915" cy="340" r="3"/></g></svg>
