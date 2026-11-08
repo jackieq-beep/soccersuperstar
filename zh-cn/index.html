@@ -161,8 +161,7 @@
   <div class="site-shell">
     <header class="topbar">
       <a class="brand" href="#home" aria-label="Soccer Superstar 首页">
-        <span class="brand-kicker">Real Freestyle Soccer</span>
-        <span class="brand-logo">SOCCER SUPERSTAR</span>
+        <img class="brand-mark" src="/assets/brand/soccer-superstar-logo-white.svg" alt="Soccer Superstar" width="604" height="185">
       </a>
       <div class="topbar-right">
         <details class="lang-picker">
@@ -434,7 +433,8 @@
       <!-- ═══ CTA / DOWNLOAD ═══ -->
       <section class="cta section" id="play">
         <div class="cta-panel frame-cut">
-          <h2>立即畅玩 Soccer Superstar</h2>
+          <img class="cta-logo" src="/assets/brand/soccer-superstar-logo.svg" alt="Soccer Superstar" width="714" height="193" loading="lazy">
+          <h2>立即游戏</h2>
           <p>加入全球超过 1 亿名玩家的行列。立即下载 Soccer Superstar，体验快节奏沉浸式足球对决、技巧型任意球、离线游玩，以及在每场比赛中成为英雄的激动时刻。</p>
           <div class="store-links" aria-label="下载 Soccer Superstar">
             <a href="https://apps.apple.com/us/app/soccer-superstar/id1550945606" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/app-store-en.png" alt="在 App Store 下载" width="540" height="160"></a>
@@ -452,8 +452,7 @@
     <footer class="footer">
       <div class="footer-top">
         <div class="footer-brand">
-          <span class="brand-kicker">Real Freestyle Soccer</span>
-          <span class="brand-logo footer-logo">SOCCER SUPERSTAR</span>
+          <img class="brand-mark footer-mark" src="/assets/brand/soccer-superstar-logo-white.svg" alt="Soccer Superstar" width="604" height="185" loading="lazy">
           <p class="footer-tagline">快节奏沉浸式手机足球对决：任意球、弧线射门和制胜时刻。</p>
         </div>
         <nav class="footer-nav" aria-label="页脚导航">
@@ -569,7 +568,7 @@
       });
 
       // 2. Headings and labels: shrink instead of leaving one word alone, or overflowing
-      const FIT = '.brand-logo, h1, h2, h3, .news-badge, .social-stat span';
+      const FIT = 'h1, h2, h3, .news-badge, .social-stat span';
 
       function measure(el) {
         const tops = [];
