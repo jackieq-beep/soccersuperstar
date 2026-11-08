@@ -45,8 +45,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#050b14">
-  <link rel="preload" href="/assets/fonts/barlow-condensed-800.woff" as="font" type="font/woff" crossorigin>
+  <meta name="theme-color" content="#05070c">
+  <link rel="preload" href="/assets/fonts/unbounded-variable.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="/styles.css">
 
   <script type="application/ld+json">
@@ -151,13 +151,7 @@
         <span class="brand-kicker">Real Freestyle Soccer</span>
         <span class="brand-logo">SOCCER SUPERSTAR</span>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#features">Features</a>
-        <a href="#modes">Game Modes</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#news">News</a>
-        <a href="#faq">FAQ</a>
-        <a href="#play" class="nav-cta">Play Now</a>
+      <div class="topbar-right">
         <details class="lang-picker">
           <summary aria-label="Language"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span class="lang-current">EN</span></summary>
           <ul class="lang-menu">
@@ -171,11 +165,27 @@
             <li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
           </ul>
         </details>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+          <span class="nav-toggle-label">Menu</span>
+          <span class="nav-toggle-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+      <nav class="nav" id="site-menu" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#how-to-play">How to Play</a>
+        <a href="#modes">Game Modes</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#news">News</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#play" class="nav-cta">Play Now</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </header>
+
+    <div class="centerpiece" aria-hidden="true">
+      <img src="/assets/images/football-centerpiece.svg" alt="" width="520" height="520" fetchpriority="high">
+    </div>
 
     <main id="home">
 
@@ -183,30 +193,27 @@
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">OVER 100 MILLION DOWNLOADS</p>
-          <h1><span class="visually-hidden">Soccer Superstar: </span>PLAY FAST.<br>SCORE BIG.</h1>
+          <h1><span class="visually-hidden">Soccer Superstar: </span>Play Fast.<br>Score Big.</h1>
           <p class="hero-text">Flick to shoot, bend it around the wall, and find the top corner. Hundreds of short levels, made for playing on your phone.</p>
           <div class="store-links" aria-label="Download Soccer Superstar">
             <a href="https://apps.apple.com/us/app/soccer-superstar/id1550945606" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/app-store-en.png" alt="Download on the App Store" width="540" height="160"></a>
             <a href="https://play.google.com/store/apps/details?id=com.soccer.score.star&amp;hl=en_US" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/google-play-en.png" alt="Get it on Google Play" width="538" height="160"></a>
           </div>
-          <a href="#how-to-play" class="hero-link">How to Play <span aria-hidden="true">↓</span></a>
           <ul class="hero-stats" aria-label="Key highlights">
             <li><strong>4.7★</strong><span>3.06M player reviews</span></li>
             <li><strong>100M+</strong><span>total downloads</span></li>
             <li><strong>Free to Play</strong><span>offline anytime</span></li>
           </ul>
         </div>
-        <div class="hero-media frame-cut">
-          <img src="/assets/images/soccer-superstar-hero-trophy.webp" alt="Soccer Superstar football heroes standing around a gold trophy in a purple lit stadium" width="610" height="341" fetchpriority="high">
-        </div>
+        <a href="#how-to-play" class="hero-link">How to Play <span aria-hidden="true">↓</span></a>
       </section>
 
       <!-- ═══ OFFICIAL SITE SEO INTRO ═══ -->
       <section class="official-intro section" id="official-site">
         <div class="intro-panel frame-cut">
-          <img class="intro-media" src="/assets/images/soccer-superstar-free-kick-key-art.webp" alt="Soccer Superstar Portugal free kick scene against Argentina with crowd flares inside a football stadium" width="1400" height="788" loading="lazy">
+          <img class="intro-media" src="/assets/images/soccer-superstar-hero-trophy.webp" alt="Soccer Superstar football heroes standing around a gold trophy in a purple lit stadium" width="610" height="341" loading="lazy">
           <p class="eyebrow">OFFICIAL SOCCER SUPERSTAR WEBSITE</p>
-          <h2>FREE FOOTBALL ON iOS AND ANDROID</h2>
+          <h2>Free Football on iOS and Android</h2>
           <p>Soccer Superstar is a free football game for iPhone, iPad and Android. Matches are short, you shoot with one flick, and whether it goes in comes down to your aim. Curl shots around defenders, take free kicks, unlock star players, and keep playing when you have no signal.</p>
           <div class="intro-columns">
             <div>
@@ -267,7 +274,7 @@
       <section class="features section" id="features">
         <div class="section-heading">
           <p class="eyebrow">GAME FEATURES</p>
-          <h2>WHAT'S IN THE GAME</h2>
+          <h2>What's in the Game</h2>
         </div>
         <div class="feature-grid">
           <article class="feature-card frame-cut">
@@ -305,7 +312,7 @@
       <section class="how-to-play section" id="how-to-play">
         <div class="section-heading">
           <p class="eyebrow">GETTING STARTED</p>
-          <h2>HOW TO PLAY</h2>
+          <h2>How to Play</h2>
           <p class="section-subtext">Four things to know before your first match.</p>
         </div>
         <div class="steps-grid">
@@ -332,7 +339,7 @@
       <section class="showcase section">
         <div class="showcase-copy">
           <p class="eyebrow">FOOTBALL WITHOUT THE WAIT</p>
-          <h2>JUST ONE MORE LEVEL</h2>
+          <h2>Just One More Level</h2>
           <p>You don't need hours of practice to enjoy it. Levels are short, the difficulty goes up as you get better, and there's always a reward pack or a new player a few levels ahead.</p>
           <a href="#play" class="button button-primary">Download Free</a>
         </div>
@@ -345,7 +352,7 @@
       <section class="gallery section" id="gallery">
         <div class="section-heading">
           <p class="eyebrow">ON THE PITCH</p>
-          <h2>FROM THE GAME</h2>
+          <h2>From the Game</h2>
         </div>
         <div class="gallery-grid">
           <figure class="gallery-card frame-cut landscape">
@@ -367,7 +374,7 @@
       <section class="modes section" id="modes">
         <div class="section-heading">
           <p class="eyebrow">WAYS TO PLAY</p>
-          <h2>FOUR MODES, ALL FREE</h2>
+          <h2>Four Modes, All Free</h2>
           <p class="section-subtext">Every mode works offline.</p>
         </div>
         <div class="modes-grid">
@@ -399,7 +406,7 @@
       <section class="news section" id="news" data-ended-label="Event ended">
         <div class="section-heading">
           <p class="eyebrow">LATEST NEWS</p>
-          <h2>WHAT'S ON IN THE GAME</h2>
+          <h2>What's On in the Game</h2>
           <p class="section-subtext">Events and rewards running in the game right now.</p>
         </div>
         <div class="news-grid">
@@ -433,7 +440,7 @@
         <div class="about-grid">
           <div class="about-copy">
             <p class="eyebrow">WHY PLAYERS LOVE IT</p>
-            <h2>SIMPLE CONTROLS, PLENTY OF CHALLENGE</h2>
+            <h2>Simple Controls, Plenty of Challenge</h2>
             <p>The controls make sense straight away. After that it's about getting better: harder shots, tighter angles, bigger games. Soccer Superstar has been downloaded more than 100 million times and has a 4.7-star rating from over 3 million players.</p>
             <ul class="checklist">
               <li>Free, and works offline</li>
@@ -459,7 +466,7 @@
       <section class="reviews section" id="reviews">
         <div class="section-heading">
           <p class="eyebrow">PLAYER REVIEWS</p>
-          <h2>WHAT PLAYERS SAY</h2>
+          <h2>What Players Say</h2>
           <p class="section-subtext">Rated 4.7 stars from over 3 million reviews on Google Play.</p>
         </div>
         <div class="reviews-grid">
@@ -533,7 +540,7 @@
       <section class="faq section" id="faq">
         <div class="section-heading">
           <p class="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-          <h2>COMMON QUESTIONS</h2>
+          <h2>Common Questions</h2>
         </div>
         <div class="faq-grid">
           <div class="faq-item frame-cut">
@@ -567,7 +574,7 @@
       <section class="contact section" id="contact">
         <div class="section-heading">
           <p class="eyebrow">GET IN TOUCH</p>
-          <h2>CONTACT US</h2>
+          <h2>Contact Us</h2>
           <p>Email us about game support, business or press.</p>
         </div>
         <div class="contact-grid">
@@ -588,7 +595,7 @@
       <section class="social section" id="social">
         <div class="section-heading">
           <p class="eyebrow">JOIN THE COMMUNITY</p>
-          <h2>170K+ FOLLOWERS</h2>
+          <h2>170K+ Followers</h2>
           <p class="section-subtext">We post game updates, new events and clips from players.</p>
         </div>
         <div class="social-grid">
@@ -633,7 +640,7 @@
       <section class="cta section" id="play">
         <div class="cta-panel frame-cut">
           <p class="eyebrow">DOWNLOAD TODAY</p>
-          <h2>PLAY SOCCER SUPERSTAR NOW</h2>
+          <h2>Play Soccer Superstar Now</h2>
           <p>It's free on iOS and Android, and more than 100 million people have downloaded it.</p>
           <div class="store-links" aria-label="Download Soccer Superstar">
             <a href="https://apps.apple.com/us/app/soccer-superstar/id1550945606" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/app-store-en.png" alt="Download on the App Store" width="540" height="160"></a>
@@ -828,20 +835,41 @@
   </style>
 
   <script>
-    // Mobile nav toggle
+    // Full-screen menu
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.nav');
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('nav-open');
-      });
-      nav.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
-        nav.classList.remove('nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }));
+    function setMenu(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('nav-open', open);
+      document.body.classList.toggle('menu-open', open);
     }
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('nav-open')) { setMenu(false); toggle.focus(); } });
+    }
+
+    // Header gets a background once you scroll; the football fades back after the first screen
+    // and comes forward again at the download section.
+    const topbar = document.querySelector('.topbar');
+    const hero = document.querySelector('.hero');
+    const cta = document.getElementById('play');
+    function onScroll() {
+      const y = window.scrollY || window.pageYOffset;
+      if (topbar) topbar.classList.toggle('scrolled', y > 30);
+      if (hero && cta) {
+        const vh = window.innerHeight;
+        const pastHero = hero.getBoundingClientRect().bottom < vh * 0.55;
+        const r = cta.getBoundingClientRect();
+        const foot = document.querySelector('.footer');
+        const wide = window.matchMedia('(min-width: 761px)').matches;  // on phones the ball would cover the text
+        const atCta = wide && r.top < vh * 0.45 && (!foot || foot.getBoundingClientRect().top > vh * 0.8);
+        document.body.classList.toggle('ball-dim', pastHero && !atCta);
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
 
     // ── Text fitting ─────────────────────────────────────────────
     // 1. "Soccer Superstar" is never split across two lines.

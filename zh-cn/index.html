@@ -45,8 +45,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#050b14">
-  <link rel="preload" href="/assets/fonts/barlow-condensed-800.woff" as="font" type="font/woff" crossorigin>
+  <meta name="theme-color" content="#05070c">
+  <link rel="preload" href="/assets/fonts/unbounded-variable.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="/styles.css">
 
   <script type="application/ld+json">
@@ -164,13 +164,7 @@
         <span class="brand-kicker">Real Freestyle Soccer</span>
         <span class="brand-logo">SOCCER SUPERSTAR</span>
       </a>
-      <nav class="nav" aria-label="主导航">
-        <a href="#features">游戏特色</a>
-        <a href="#modes">游戏模式</a>
-        <a href="#gallery">精彩画面</a>
-        <a href="#news">新闻</a>
-        <a href="#faq">常见问题</a>
-        <a href="#play" class="nav-cta">立即游戏</a>
+      <div class="topbar-right">
         <details class="lang-picker">
           <summary aria-label="语言"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span class="lang-current">中文</span></summary>
           <ul class="lang-menu">
@@ -184,11 +178,27 @@
             <li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
           </ul>
         </details>
+        <button class="nav-toggle" aria-label="切换菜单" aria-expanded="false" aria-controls="site-menu">
+          <span class="nav-toggle-label">菜单</span>
+          <span class="nav-toggle-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+      <nav class="nav" id="site-menu" aria-label="主导航">
+        <a href="#features">游戏特色</a>
+        <a href="#how-to-play">玩法介绍</a>
+        <a href="#modes">游戏模式</a>
+        <a href="#gallery">精彩画面</a>
+        <a href="#news">新闻</a>
+        <a href="#reviews">玩家评价</a>
+        <a href="#faq">常见问题</a>
+        <a href="#contact">联系方式</a>
+        <a href="#play" class="nav-cta">立即游戏</a>
       </nav>
-      <button class="nav-toggle" aria-label="切换菜单" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </header>
+
+    <div class="centerpiece" aria-hidden="true">
+      <img src="/assets/images/football-centerpiece.svg" alt="" width="520" height="520" fetchpriority="high">
+    </div>
 
     <main id="home">
 
@@ -202,22 +212,19 @@
             <a href="https://apps.apple.com/us/app/soccer-superstar/id1550945606" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/app-store-en.png" alt="在 App Store 下载" width="540" height="160"></a>
             <a href="https://play.google.com/store/apps/details?id=com.soccer.score.star&amp;hl=zh_CN" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/google-play-en.png" alt="在 Google Play 下载" width="538" height="160"></a>
           </div>
-          <a href="#how-to-play" class="hero-link">玩法介绍 <span aria-hidden="true">↓</span></a>
           <ul class="hero-stats" aria-label="主要亮点">
             <li><strong>4.7★</strong><span>306 万玩家评价</span></li>
             <li><strong>100M+</strong><span>总下载量</span></li>
             <li><strong>免费游玩</strong><span>随时离线畅玩</span></li>
           </ul>
         </div>
-        <div class="hero-media frame-cut">
-          <img src="/assets/images/soccer-superstar-hero-trophy.webp" alt="Soccer Superstar 足球英雄们站在紫色灯光球场中的金色奖杯周围" width="610" height="341" fetchpriority="high">
-        </div>
+        <a href="#how-to-play" class="hero-link">玩法介绍 <span aria-hidden="true">↓</span></a>
       </section>
 
       <!-- ═══ OFFICIAL SITE SEO INTRO ═══ -->
       <section class="official-intro section" id="official-site">
         <div class="intro-panel frame-cut">
-          <img class="intro-media" src="/assets/images/soccer-superstar-free-kick-key-art.webp" alt="Soccer Superstar 葡萄牙对阵阿根廷的任意球场景，球场内观众点燃焰火" width="1400" height="788" loading="lazy">
+          <img class="intro-media" src="/assets/images/soccer-superstar-hero-trophy.webp" alt="Soccer Superstar 足球英雄们站在紫色灯光球场中的金色奖杯周围" width="610" height="341" loading="lazy">
           <p class="eyebrow">Soccer Superstar 官方网站</p>
           <h2>iOS 和 Android 免费手机足球对决</h2>
           <p>Soccer Superstar 是一款官方免费足球游戏，专为喜欢快节奏比赛、简单滑动操控和技巧进球的手机玩家打造。绕过后卫打出弧线球，罚进惊险任意球，解锁球星，即使离线也能继续畅玩。</p>
@@ -646,7 +653,7 @@
       <section class="cta section" id="play">
         <div class="cta-panel frame-cut">
           <p class="eyebrow">立即下载——完全免费</p>
-          <h2>立即畅玩 SOCCER SUPERSTAR</h2>
+          <h2>立即畅玩 Soccer Superstar</h2>
           <p>加入全球超过 1 亿名玩家的行列。立即下载 Soccer Superstar，体验快节奏沉浸式足球对决、技巧型任意球、离线游玩，以及在每场比赛中成为英雄的激动时刻。</p>
           <div class="store-links" aria-label="下载 Soccer Superstar">
             <a href="https://apps.apple.com/us/app/soccer-superstar/id1550945606" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/app-store-en.png" alt="在 App Store 下载" width="540" height="160"></a>
@@ -709,20 +716,41 @@
   </div>
 
   <script>
-    // Mobile nav toggle
+    // Full-screen menu
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.nav');
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('nav-open');
-      });
-      nav.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
-        nav.classList.remove('nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }));
+    function setMenu(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('nav-open', open);
+      document.body.classList.toggle('menu-open', open);
     }
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('nav-open')) { setMenu(false); toggle.focus(); } });
+    }
+
+    // Header gets a background once you scroll; the football fades back after the first screen
+    // and comes forward again at the download section.
+    const topbar = document.querySelector('.topbar');
+    const hero = document.querySelector('.hero');
+    const cta = document.getElementById('play');
+    function onScroll() {
+      const y = window.scrollY || window.pageYOffset;
+      if (topbar) topbar.classList.toggle('scrolled', y > 30);
+      if (hero && cta) {
+        const vh = window.innerHeight;
+        const pastHero = hero.getBoundingClientRect().bottom < vh * 0.55;
+        const r = cta.getBoundingClientRect();
+        const foot = document.querySelector('.footer');
+        const wide = window.matchMedia('(min-width: 761px)').matches;  // on phones the ball would cover the text
+        const atCta = wide && r.top < vh * 0.45 && (!foot || foot.getBoundingClientRect().top > vh * 0.8);
+        document.body.classList.toggle('ball-dim', pastHero && !atCta);
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
 
     // ── Text fitting ─────────────────────────────────────────────
     // 1. "Soccer Superstar" is never split across two lines.
