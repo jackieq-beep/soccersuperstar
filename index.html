@@ -37,7 +37,7 @@
   <meta property="og:locale:alternate" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Soccer Superstar Official Website">
-  <meta name="twitter:description" content="Play the free mobile football game with flick controls, curved shots, free kicks, offline play, and championship events.">
+  <meta name="twitter:description" content="A free football game for your phone. Flick to shoot, bend free kicks around the wall, and play offline.">
   <meta name="twitter:image" content="https://www.simface.com/assets/images/soccer-superstar-share.jpg">
   <meta name="twitter:image:alt" content="Soccer Superstar player lining up a free kick against a defensive wall in a packed stadium">
 
@@ -45,8 +45,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#050b14">
-  <link rel="preload" href="/assets/fonts/barlow-condensed-800.woff" as="font" type="font/woff" crossorigin>
+  <meta name="theme-color" content="#05070c">
+  <link rel="preload" href="/assets/fonts/unbounded-variable.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="/styles.css">
 
   <script type="application/ld+json">
@@ -88,7 +88,7 @@
         "operatingSystem": "Android, iOS",
         "isAccessibleForFree": true,
         "image": [
-          "https://www.simface.com/assets/images/soccer-superstar-hero-trophy.webp",
+          "https://www.simface.com/assets/images/soccer-superstar-hero-players.webp",
           "https://www.simface.com/assets/images/soccer-superstar-walkout-trophy-before-kickoff.webp",
           "https://www.simface.com/assets/images/soccer-superstar-player-customization-locker-room.webp"
         ],
@@ -119,7 +119,7 @@
             "name": "Is Soccer Superstar free to play?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Soccer Superstar is free to download and play on iOS and Android, with optional in-app purchases and ads."
+              "text": "Yes. It's free to download and play on iOS and Android. The game has optional in-app purchases and ads."
             }
           },
           {
@@ -127,7 +127,7 @@
             "name": "Can I play Soccer Superstar offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Soccer Superstar supports offline play, so players can enjoy levels, tournaments, and training without needing an internet connection."
+              "text": "Yes. Leagues, tournaments and training all work offline, so once the game is installed you can play anywhere."
             }
           },
           {
@@ -135,7 +135,7 @@
             "name": "How do the Soccer Superstar controls work?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Soccer Superstar uses simple flick controls. Swipe across the ball to shoot, pass, curve, and power the ball past defenders and goalkeepers."
+              "text": "Swipe across the ball to shoot. The direction, speed and curve of your swipe decide where the ball goes. There are no buttons or joysticks."
             }
           }
         ]
@@ -151,13 +151,7 @@
         <span class="brand-kicker">Real Freestyle Soccer</span>
         <span class="brand-logo">SOCCER SUPERSTAR</span>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#features">Features</a>
-        <a href="#modes">Game Modes</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#news">News</a>
-        <a href="#faq">FAQ</a>
-        <a href="#play" class="nav-cta">Play Now</a>
+      <div class="topbar-right">
         <details class="lang-picker">
           <summary aria-label="Language"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span class="lang-current">EN</span></summary>
           <ul class="lang-menu">
@@ -171,51 +165,64 @@
             <li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
           </ul>
         </details>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+          <span class="nav-toggle-label">Menu</span>
+          <span class="nav-toggle-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+      <nav class="nav" id="site-menu" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#how-to-play">How to Play</a>
+        <a href="#modes">Game Modes</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#news">News</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#play" class="nav-cta">Play Now</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </header>
+
+    <div class="pitch-bg" aria-hidden="true"></div>
 
     <main id="home">
 
       <!-- ═══ HERO ═══ -->
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">THE #1 MOBILE FOOTBALL HIT — 100M+ DOWNLOADS</p>
-          <h1><span class="visually-hidden">Soccer Superstar: </span>PLAY FAST.<br>SCORE BIG.</h1>
-          <p class="hero-text">Play Soccer Superstar and enjoy insanely real, ultra fast, immersive football action built for mobile. Flick, curve, and strike your way through hundreds of levels and become the hero in every match.</p>
+          <p class="eyebrow">OVER 100 MILLION DOWNLOADS</p>
+          <h1><span class="visually-hidden">Soccer Superstar: </span>Play Fast.<br>Score Big.</h1>
+          <p class="hero-text">Flick to shoot, bend it around the wall, and find the top corner. Hundreds of short levels, made for playing on your phone.</p>
           <div class="store-links" aria-label="Download Soccer Superstar">
             <a href="https://apps.apple.com/us/app/soccer-superstar/id1550945606" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/app-store-en.png" alt="Download on the App Store" width="540" height="160"></a>
             <a href="https://play.google.com/store/apps/details?id=com.soccer.score.star&amp;hl=en_US" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/google-play-en.png" alt="Get it on Google Play" width="538" height="160"></a>
           </div>
-          <a href="#how-to-play" class="hero-link">How to Play <span aria-hidden="true">↓</span></a>
           <ul class="hero-stats" aria-label="Key highlights">
             <li><strong>4.7★</strong><span>3.06M player reviews</span></li>
             <li><strong>100M+</strong><span>total downloads</span></li>
             <li><strong>Free to Play</strong><span>offline anytime</span></li>
           </ul>
         </div>
-        <div class="hero-media frame-cut">
-          <img src="/assets/images/soccer-superstar-hero-trophy.webp" alt="Soccer Superstar football heroes standing around a gold trophy in a purple lit stadium" width="610" height="341" fetchpriority="high">
+        <div class="hero-art">
+          <img src="/assets/images/soccer-superstar-hero-players.webp" alt="Soccer Superstar football heroes standing around a gold trophy in a purple lit stadium" width="1220" height="682" fetchpriority="high">
         </div>
+        <a href="#how-to-play" class="hero-link">How to Play <span aria-hidden="true">↓</span></a>
       </section>
 
       <!-- ═══ OFFICIAL SITE SEO INTRO ═══ -->
       <section class="official-intro section" id="official-site">
         <div class="intro-panel frame-cut">
-          <img class="intro-media" src="/assets/images/soccer-superstar-free-kick-key-art.webp" alt="Soccer Superstar Portugal free kick scene against Argentina with crowd flares inside a football stadium" width="1400" height="788" loading="lazy">
           <p class="eyebrow">OFFICIAL SOCCER SUPERSTAR WEBSITE</p>
-          <h2>FREE MOBILE FOOTBALL ACTION FOR iOS AND ANDROID</h2>
-          <p>Soccer Superstar is the official free football game for players who want fast match moments, simple flick controls, and skill based scoring on mobile. Curve shots around defenders, finish dramatic free kicks, unlock star footballers, and keep playing even when you are offline.</p>
+          <h2>Free Football on iOS and Android</h2>
+          <p>Soccer Superstar is a free football game for iPhone, iPad and Android. Matches are short, you shoot with one flick, and whether it goes in comes down to your aim. Curl shots around defenders, take free kicks, unlock star players, and keep playing when you have no signal.</p>
           <div class="intro-columns">
             <div>
-              <h3>Built for quick football sessions</h3>
-              <p>Jump into a level, read the angle, flick the ball, and score. Every stage is designed around clear football decisions that feel easy to start and satisfying to master.</p>
+              <h3>Made for short sessions</h3>
+              <p>Pick a level, find the angle, flick, score. You'll get the hang of it in your first match and still be working on your free kicks weeks later.</p>
             </div>
             <div>
-              <h3>Made for football fans worldwide</h3>
-              <p>Play Road to the Championship, Daily Challenges, Training, and hundreds of progressive levels across iPhone, iPad, and Android devices.</p>
+              <h3>Plenty to play through</h3>
+              <p>Hundreds of levels, plus Road to the Championship, Daily Challenges and Training. On iPhone, iPad and Android.</p>
             </div>
           </div>
         </div>
@@ -236,7 +243,7 @@
           <span aria-hidden="true">✦</span>
           <span>100M+ DOWNLOADS</span>
           <span aria-hidden="true">✦</span>
-          <span>IMMERSIVE MATCH ACTION</span>
+          <span>3D MATCHES</span>
           <span aria-hidden="true">✦</span>
           <span>4.7 STAR RATING</span>
           <span aria-hidden="true">✦</span>
@@ -254,7 +261,7 @@
           <span aria-hidden="true">✦</span>
           <span>100M+ DOWNLOADS</span>
           <span aria-hidden="true">✦</span>
-          <span>IMMERSIVE MATCH ACTION</span>
+          <span>3D MATCHES</span>
           <span aria-hidden="true">✦</span>
           <span>4.7 STAR RATING</span>
           <span aria-hidden="true">✦</span>
@@ -267,35 +274,35 @@
       <section class="features section" id="features">
         <div class="section-heading">
           <p class="eyebrow">GAME FEATURES</p>
-          <h2>EVERYTHING YOU NEED TO BECOME A LEGEND</h2>
+          <h2>What's in the Game</h2>
         </div>
         <div class="feature-grid">
           <article class="feature-card frame-cut">
             <img src="/assets/images/soccer-superstar-player-customization-locker-room.webp" alt="Soccer Superstar player customization screen showing a number 10 footballer in a yellow jersey with boot options" width="640" height="1138" loading="lazy">
             <div class="feature-card-copy">
               <h3>Player Customization</h3>
-              <p>Create your own look with standout kits, boots, and visual styling using the latest motion capture technology of real star players, then take your favorite setup onto the pitch.</p>
+              <p>Choose your kit, boots and style, then take them onto the pitch. Player movements come from motion capture of real star players.</p>
             </div>
           </article>
           <article class="feature-card frame-cut">
             <img src="/assets/images/soccer-superstar-flick-pass-arrows-controls.webp" alt="Soccer Superstar number 10 lining up a pass, with arrows showing the ball's path toward goal" width="640" height="1138" loading="lazy">
             <div class="feature-card-copy">
-              <h3>Super Simple Controls</h3>
-              <p>Just flick your finger across the screen to pass, shoot, curve, and power the ball past defenders. Easy to learn — hard to master.</p>
+              <h3>Simple Controls</h3>
+              <p>Flick your finger across the screen to pass, shoot, curl it or hit it hard. It takes a minute to learn and a lot longer to get good at.</p>
             </div>
           </article>
           <article class="feature-card frame-cut">
             <img src="/assets/images/soccer-superstar-scissor-kick-volley.webp" alt="Soccer Superstar bicycle kick sequence in front of goal with defenders and stadium crowd" width="640" height="1138" loading="lazy">
             <div class="feature-card-copy">
-              <h3>Immersive 3D Match Action</h3>
-              <p>Powered by an advanced 3D mobile engine with intelligent game AI. Realistic ball physics and dynamic match drama that gets more challenging as you level up.</p>
+              <h3>3D Matches</h3>
+              <p>Full 3D stadiums, realistic ball physics, and AI defenders and keepers that get harder to beat as you move up the levels.</p>
             </div>
           </article>
           <article class="feature-card frame-cut">
             <img src="/assets/images/soccer-superstar-awards-ceremony-golden-ball.webp" alt="Soccer Superstar awards ceremony scene with a pink haired player holding a golden football trophy" width="640" height="1138" loading="lazy">
             <div class="feature-card-copy">
               <h3>Star Players to Unlock</h3>
-              <p>Progress through levels, earn reward packs, and collect player shards to unlock standout star footballers. Chase the feeling of becoming the hero in every match.</p>
+              <p>Win levels to earn reward packs and player shards. Collect enough shards and a new star player joins your squad.</p>
             </div>
           </article>
         </div>
@@ -304,26 +311,26 @@
       <!-- ═══ HOW TO PLAY ═══ -->
       <section class="how-to-play section" id="how-to-play">
         <div class="section-heading">
-          <p class="eyebrow">GET STARTED IN SECONDS</p>
-          <h2>HOW TO PLAY</h2>
-          <p class="section-subtext">No tutorial needed. Just pick it up and go.</p>
+          <p class="eyebrow">GETTING STARTED</p>
+          <h2>How to Play</h2>
+          <p class="section-subtext">Four things to know before your first match.</p>
         </div>
         <div class="steps-grid">
           <div class="step-card frame-cut">
             <h3>Flick to Kick</h3>
-            <p>Swipe your finger across the ball on screen to kick it. The direction and speed of your flick determines where it goes — it's that intuitive.</p>
+            <p>Swipe across the ball to kick it. The direction and speed of your swipe decide where it goes.</p>
           </div>
           <div class="step-card frame-cut">
             <h3>Curve &amp; Power</h3>
-            <p>Sweep wide to bend the ball around walls, or drive straight through defenders. Every shot rewards creativity and precision.</p>
+            <p>Swipe in an arc to bend the ball around the wall, or swipe straight and fast to drive it past defenders.</p>
           </div>
           <div class="step-card frame-cut">
             <h3>Score &amp; Level Up</h3>
-            <p>Hit the back of the net to progress through increasingly tough League matches. Unlock new players, tougher challenges, and bigger trophies as you rise.</p>
+            <p>Score to move on to the next League match. Each one is harder than the last, and you unlock new players and bigger trophies along the way.</p>
           </div>
           <div class="step-card frame-cut">
             <h3>Compete &amp; Win</h3>
-            <p>Take on limited-time Daily Challenges, tackle the Road to the Championship, and chase glory — all without needing an internet connection.</p>
+            <p>Try the limited-time Daily Challenges and work your way through Road to the Championship. You don't need an internet connection.</p>
           </div>
         </div>
       </section>
@@ -332,8 +339,8 @@
       <section class="showcase section">
         <div class="showcase-copy">
           <p class="eyebrow">FOOTBALL WITHOUT THE WAIT</p>
-          <h2>JUMP IN FAST. KEEP LEVELING UP.</h2>
-          <p>Love arcade football but don't have time to practice for hours? Soccer Superstar is easy to pick up, hard to put down, and keeps raising the challenge as your skills improve. Progress through levels at your own pace, earn reward packs, and unlock new star footballers as you go.</p>
+          <h2>Just One More Level</h2>
+          <p>You don't need hours of practice to enjoy it. Levels are short, the difficulty goes up as you get better, and there's always a reward pack or a new player a few levels ahead.</p>
           <a href="#play" class="button button-primary">Download Free</a>
         </div>
         <div class="showcase-media frame-cut">
@@ -345,20 +352,20 @@
       <section class="gallery section" id="gallery">
         <div class="section-heading">
           <p class="eyebrow">ON THE PITCH</p>
-          <h2>REAL SHOTS. REAL MOMENTS.</h2>
+          <h2>From the Game</h2>
         </div>
         <div class="gallery-grid">
           <figure class="gallery-card frame-cut landscape">
             <img src="/assets/images/soccer-superstar-free-kick-key-art.webp" alt="Soccer Superstar Portugal free kick scene against Argentina with crowd flares inside a football stadium" width="1400" height="788" loading="lazy">
-            <figcaption>Step up under pressure and bend the ball past the wall.</figcaption>
+            <figcaption>A big free kick in front of a packed stadium.</figcaption>
           </figure>
           <figure class="gallery-card frame-cut portrait">
             <img src="/assets/images/soccer-superstar-free-kick-wall-challenge.webp" alt="Soccer Superstar white shirt player taking a free kick over a defensive wall toward goal" width="507" height="863" loading="lazy">
-            <figcaption>Master free kicks and score from impossible angles.</figcaption>
+            <figcaption>Over the wall and into the net.</figcaption>
           </figure>
           <figure class="gallery-card frame-cut portrait">
             <img src="/assets/images/soccer-superstar-training-target-challenge.webp" alt="Soccer Superstar target training challenge with a hand icon guiding a curved shot path" width="511" height="913" loading="lazy">
-            <figcaption>Sharpen your technique and build match winning confidence.</figcaption>
+            <figcaption>Target practice in Training mode.</figcaption>
           </figure>
         </div>
       </section>
@@ -367,29 +374,29 @@
       <section class="modes section" id="modes">
         <div class="section-heading">
           <p class="eyebrow">WAYS TO PLAY</p>
-          <h2>YOUR GAME. YOUR RULES.</h2>
-          <p class="section-subtext">Multiple modes to keep every session fresh — all available offline, all completely free.</p>
+          <h2>Four Modes, All Free</h2>
+          <p class="section-subtext">Every mode works offline.</p>
         </div>
         <div class="modes-grid">
           <div class="mode-card frame-cut">
             <div class="mode-icon" aria-hidden="true">⚽</div>
             <h3>Main Levels</h3>
-            <p>Battle through hundreds of progressive levels with increasing difficulty. Each match demands smarter angles, faster thinking, and more precise placement — and rewards you with packs and player shards to unlock new star footballers.</p>
+            <p>Hundreds of levels, each a bit harder than the last, so you'll need better angles and more accurate shots as you go. Wins earn packs and player shards for unlocking new star players.</p>
           </div>
           <div class="mode-card frame-cut">
             <div class="mode-icon" aria-hidden="true">🏆</div>
             <h3>Daily Challenge</h3>
-            <p>A limited-time event that drops periodically with its own themed stadiums and exclusive gear. Complete the challenge to earn special rewards before the event ends.</p>
+            <p>A limited-time event with its own themed stadiums and gear you can't get anywhere else. Finish it before it ends to collect the rewards.</p>
           </div>
           <div class="mode-card frame-cut">
             <div class="mode-icon" aria-hidden="true">🌍</div>
             <h3>Road to the Championship</h3>
-            <p>Relive legendary runs from past world champions. Clear a full chapter in one go to claim the rewards. Six championship runs are available now — with more on the way.</p>
+            <p>Replay famous title runs by past world champions. Clear a whole chapter in one go to claim its rewards. Six runs are out now, with more coming.</p>
           </div>
           <div class="mode-card frame-cut">
             <div class="mode-icon" aria-hidden="true">🎽</div>
             <h3>Training &amp; Skills</h3>
-            <p>Sharpen your technique through dedicated training challenges. Hit targets, practice curves, and build the muscle memory that wins matches when it counts.</p>
+            <p>Drills for hitting targets and bending shots, so they go in when it counts in a real match.</p>
           </div>
         </div>
       </section>
@@ -399,8 +406,8 @@
       <section class="news section" id="news" data-ended-label="Event ended">
         <div class="section-heading">
           <p class="eyebrow">LATEST NEWS</p>
-          <h2>WHAT'S HAPPENING IN THE GAME</h2>
-          <p class="section-subtext">Live events, new chapters, and limited-time rewards. Jump in before they're gone.</p>
+          <h2>What's On in the Game</h2>
+          <p class="section-subtext">Events and rewards running in the game right now.</p>
         </div>
         <div class="news-grid">
           <article class="news-card frame-cut" data-ends="2026-11-14">
@@ -411,7 +418,7 @@
             <div class="news-copy">
               <p class="news-tag">Event</p>
               <h3>Road to the Championship: New Daily Rotating Chapters</h3>
-              <p>Road to the Championship just got more exciting with new Daily Rotating Chapters! Hit the pitch daily to experience a fresh set of stages and unique challenges. Test your skills as the chapters change every 24 hours. Conquer the daily rotation to earn exclusive rewards, and prove you have what it takes to become the ultimate champion. Don't miss a single day of the action!</p>
+              <p>Road to the Championship now has chapters that change every 24 hours, each with its own stages and challenges. Clear the day's chapter to earn exclusive rewards, then come back tomorrow for the next one.</p>
             </div>
           </article>
           <article class="news-card frame-cut" data-ends="2026-11-15">
@@ -422,7 +429,7 @@
             <div class="news-copy">
               <p class="news-tag">Event</p>
               <h3>Trick, Kick, and Claim the Night!</h3>
-              <p>The stadium turns spooky as Halloween magic takes over the field! Step onto a haunting pitch for daily live matches, grab glowing candles scattered across the grass for extra rewards, and power your faction's daily score to claim ultimate victory. Will you conquer the dark or get spooked? Step up, light the night, and score your way to glory!</p>
+              <p>The Halloween event is on. Play daily live matches on a haunted pitch, pick up the glowing candles on the grass for extra rewards, and add to your faction's daily score to help it win.</p>
             </div>
           </article>
         </div>
@@ -433,15 +440,15 @@
         <div class="about-grid">
           <div class="about-copy">
             <p class="eyebrow">WHY PLAYERS LOVE IT</p>
-            <h2>FAST TO LEARN. TOUGH TO MASTER.</h2>
-            <p>Soccer Superstar keeps things simple in the best way. The controls are easy to learn right away, but the challenge keeps building as you unlock tougher shots, smarter angles, and bigger match moments. With over 100 million downloads and a 4.7-star rating from more than 3 million players, it's the mobile football game people can't put down.</p>
+            <h2>Simple Controls, Plenty of Challenge</h2>
+            <p>The controls make sense straight away. After that it's about getting better: harder shots, tighter angles, bigger games. Soccer Superstar has been downloaded more than 100 million times and has a 4.7-star rating from over 3 million players.</p>
             <ul class="checklist">
-              <li>Play offline for free — no internet required</li>
-              <li>Curve, power, and place every shot with a single flick</li>
-              <li>Unlock star players captured with real motion technology</li>
-              <li>Take on limited-time Daily Challenges with exclusive themed stadiums and gear</li>
-              <li>Advanced AI and realistic 3D ball physics</li>
-              <li>Rated E for Everyone — great for all ages</li>
+              <li>Free, and works offline</li>
+              <li>Aim, curl and power from a single swipe</li>
+              <li>Star players animated with real motion capture</li>
+              <li>Limited-time Daily Challenges with themed stadiums and gear</li>
+              <li>Smart AI opponents and realistic 3D ball physics</li>
+              <li>Rated E for Everyone</li>
             </ul>
           </div>
           <div class="about-stack">
@@ -459,7 +466,7 @@
       <section class="reviews section" id="reviews">
         <div class="section-heading">
           <p class="eyebrow">PLAYER REVIEWS</p>
-          <h2>WHAT THE FANS SAY</h2>
+          <h2>What Players Say</h2>
           <p class="section-subtext">Rated 4.7 stars from over 3 million reviews on Google Play.</p>
         </div>
         <div class="reviews-grid">
@@ -533,32 +540,32 @@
       <section class="faq section" id="faq">
         <div class="section-heading">
           <p class="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-          <h2>EVERYTHING YOU NEED TO KNOW</h2>
+          <h2>Common Questions</h2>
         </div>
         <div class="faq-grid">
           <div class="faq-item frame-cut">
             <h3 class="faq-q">Is Soccer Superstar free to play?</h3>
-            <p class="faq-a">Yes — Soccer Superstar is completely free to download and play on both iOS and Android. The game is supported by optional in-app purchases and ads.</p>
+            <p class="faq-a">Yes. It's free to download and play on iOS and Android. The game has optional in-app purchases and ads.</p>
           </div>
           <div class="faq-item frame-cut">
             <h3 class="faq-q">Can I play without an internet connection?</h3>
-            <p class="faq-a">Absolutely. Soccer Superstar is designed for offline play — including Leagues, Tournaments, and Training modes. Just download it once and enjoy anytime, anywhere.</p>
+            <p class="faq-a">Yes. Leagues, tournaments and training all work offline, so once the game is installed you can play anywhere.</p>
           </div>
           <div class="faq-item frame-cut">
             <h3 class="faq-q">What devices is it available on?</h3>
-            <p class="faq-a">Soccer Superstar is available on Android (Google Play) and iOS (App Store). It's rated Everyone, making it suitable for players of all ages.</p>
+            <p class="faq-a">Android phones and tablets through Google Play, and iPhone and iPad through the App Store. It's rated Everyone.</p>
           </div>
           <div class="faq-item frame-cut">
             <h3 class="faq-q">How do the controls work?</h3>
-            <p class="faq-a">It's a simple flick-to-kick mechanic — just swipe your finger across the ball to shoot. The direction, speed, and curve of your swipe determines the flight of the ball. No buttons, no joysticks.</p>
+            <p class="faq-a">Swipe across the ball to shoot. The direction, speed and curve of your swipe decide where the ball goes. There are no buttons or joysticks.</p>
           </div>
           <div class="faq-item frame-cut">
             <h3 class="faq-q">How do I unlock new players?</h3>
-            <p class="faq-a">Play through the main levels to earn reward packs and collect player shards. Once you've gathered enough shards for a footballer, they're yours to add to your squad.</p>
+            <p class="faq-a">Playing the main levels earns you reward packs and player shards. Once you have enough shards for a player, they join your squad.</p>
           </div>
           <div class="faq-item frame-cut">
             <h3 class="faq-q">What is the Daily Challenge?</h3>
-            <p class="faq-a">The Daily Challenge is a limited-time event that rolls out periodically — roughly once a month. Each event comes with its own themed stadium and exclusive gear, so the whole experience matches the event's vibe. Complete it before time runs out to claim the rewards.</p>
+            <p class="faq-a">Despite the name, it's a limited-time event that comes around about once a month. Each one has its own themed stadium and exclusive gear. Finish it before the timer runs out to get the rewards.</p>
           </div>
         </div>
       </section>
@@ -567,14 +574,14 @@
       <section class="contact section" id="contact">
         <div class="section-heading">
           <p class="eyebrow">GET IN TOUCH</p>
-          <h2>CONTACT US</h2>
-          <p>For game support, business inquiries, or press requests, reach out using the details below.</p>
+          <h2>Contact Us</h2>
+          <p>Email us about game support, business or press.</p>
         </div>
         <div class="contact-grid">
           <article class="contact-card frame-cut">
             <h3>General &amp; Support</h3>
             <p><a href="mailto:soccersuperstarteam@gmail.com">soccersuperstarteam@gmail.com</a></p>
-            <p class="contact-note">Player support, bug reports, and general questions.</p>
+            <p class="contact-note">Help with the game, bug reports and general questions.</p>
           </article>
           <article class="contact-card frame-cut">
             <h3>Business &amp; Partnerships</h3>
@@ -588,8 +595,8 @@
       <section class="social section" id="social">
         <div class="section-heading">
           <p class="eyebrow">JOIN THE COMMUNITY</p>
-          <h2>OVER 170K FOLLOWERS STRONG</h2>
-          <p class="section-subtext">Follow us for game updates, limited-time events, and highlights from the Soccer Superstar community.</p>
+          <h2>170K+ Followers</h2>
+          <p class="section-subtext">We post game updates, new events and clips from players.</p>
         </div>
         <div class="social-grid">
 
@@ -632,9 +639,9 @@
       <!-- ═══ CTA / DOWNLOAD ═══ -->
       <section class="cta section" id="play">
         <div class="cta-panel frame-cut">
-          <p class="eyebrow">DOWNLOAD TODAY — IT'S FREE</p>
-          <h2>PLAY SOCCER SUPERSTAR NOW</h2>
-          <p>Join over 100 million players worldwide. Download Soccer Superstar today and enjoy fast, immersive football action, skill based free kicks, offline play, and the thrill of becoming the hero in every match.</p>
+          <p class="eyebrow">DOWNLOAD TODAY</p>
+          <h2>Play Soccer Superstar Now</h2>
+          <p>It's free on iOS and Android, and more than 100 million people have downloaded it.</p>
           <div class="store-links" aria-label="Download Soccer Superstar">
             <a href="https://apps.apple.com/us/app/soccer-superstar/id1550945606" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/app-store-en.png" alt="Download on the App Store" width="540" height="160"></a>
             <a href="https://play.google.com/store/apps/details?id=com.soccer.score.star&amp;hl=en_US" class="store-badge" target="_blank" rel="noopener noreferrer"><img src="/assets/badges/google-play-en.png" alt="Get it on Google Play" width="538" height="160"></a>
@@ -653,7 +660,7 @@
         <div class="footer-brand">
           <span class="brand-kicker">Real Freestyle Soccer</span>
           <span class="brand-logo footer-logo">SOCCER SUPERSTAR</span>
-          <p class="footer-tagline">Fast, immersive mobile football action with free kicks, curved shots, and match winning moments.</p>
+          <p class="footer-tagline">Free kicks, curved shots and quick matches on your phone.</p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
           <div class="footer-nav-col">
@@ -828,20 +835,27 @@
   </style>
 
   <script>
-    // Mobile nav toggle
+    // Full-screen menu
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.nav');
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('nav-open');
-      });
-      nav.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
-        nav.classList.remove('nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }));
+    function setMenu(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('nav-open', open);
+      document.body.classList.toggle('menu-open', open);
     }
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('nav-open')) { setMenu(false); toggle.focus(); } });
+    }
+
+    // Header gets a background once you scroll
+    const topbar = document.querySelector('.topbar');
+    function onScroll() {
+      if (topbar) topbar.classList.toggle('scrolled', (window.scrollY || window.pageYOffset) > 30);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 
     // ── Text fitting ─────────────────────────────────────────────
     // 1. "Soccer Superstar" is never split across two lines.
