@@ -454,7 +454,10 @@ body.menu-open { overflow: hidden; }
   font-size: 0.72rem; letter-spacing: 0.06em;
   -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
 }
-.news-tag { font-size: 0.85rem; font-weight: 500; color: var(--accent); margin-bottom: 10px; }
+.news-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin-bottom: 10px; }
+.news-tag { font-size: 0.85rem; font-weight: 500; color: var(--accent); margin-bottom: 0; }
+.news-date { font-size: 0.85rem; color: var(--muted); }
+.news-copy .news-when { margin-top: 14px; font-size: 0.9rem; font-weight: 500; color: var(--text); }
 .news-copy h3 { font-size: clamp(1.25rem, 2.3vw, 1.9rem); line-height: 1.2; margin-bottom: 16px; }
 .news-copy p { color: var(--muted); }
 .news-ended { opacity: 0.5; }
